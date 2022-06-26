@@ -17,7 +17,7 @@
  * or xyw patches, to make the menu stand out from similarly coloured windows.
  * http://tools.suckless.org/dmenu/patches/border/
  */
-#define BORDER_PATCH 0
+#define BORDER_PATCH 1
 
 /* This patch makes dmenu case-insensitive by default, replacing the
  * case-insensitive -i option with a case sensitive -s option.
@@ -28,7 +28,7 @@
 /* This patch centers dmenu in the middle of the screen.
  * https://tools.suckless.org/dmenu/patches/center/
  */
-#define CENTER_PATCH 0
+#define CENTER_PATCH 1
 
 /* This patch enables color emoji in dmenu by removing a workaround for a BadLength error
  * in the Xft library when color glyphs are used.
@@ -88,7 +88,7 @@
  * The fuzzy highlight patch takes precedence over this patch.
  * https://tools.suckless.org/dmenu/patches/highlight/
  */
-#define HIGHLIGHT_PATCH 0
+#define HIGHLIGHT_PATCH 1
 
 /* This will automatically sort the search result so that high priority items are shown first.
  * https://tools.suckless.org/dmenu/patches/highpriority/
@@ -128,7 +128,7 @@
  * integrate dmenu with other UI elements that require a particular vertical size.
  * http://tools.suckless.org/dmenu/patches/line-height/
  */
-#define LINE_HEIGHT_PATCH 0
+#define LINE_HEIGHT_PATCH 1
 
 /* This patch adds a -wm flag which sets override_redirect to false; thus letting your window
  * manager manage the dmenu window.
@@ -143,7 +143,7 @@
  * selection.
  * https://tools.suckless.org/dmenu/patches/morecolor/
  */
-#define MORECOLOR_PATCH 0
+#define MORECOLOR_PATCH 1
 
 /* This patch adds basic mouse support for dmenu.
  * https://tools.suckless.org/dmenu/patches/mouse-support/
@@ -195,7 +195,7 @@
 /* Adds text which displays the number of matched and total items in the top right corner of dmenu.
  * https://tools.suckless.org/dmenu/patches/numbers/
  */
-#define NUMBERS_PATCH 0
+#define NUMBERS_PATCH 1
 
 /* This patch adds simple markup for dmenu using pango markup.
  * This depends on the pango library v1.44 or greater.

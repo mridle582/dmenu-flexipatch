@@ -15,8 +15,8 @@ static int incremental = 0;                 /* -r  option; if 1, outputs text ea
 static int instant = 0;                     /* -n  option; if 1, selects matching item without the need to press enter */
 #endif // INSTANT_PATCH
 #if CENTER_PATCH
-static int center = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width = 500;                 /* minimum width when centered */
+static int center = 0;                      /* -c  option; if 0, dmenu won't be centered on the screen */
+static int min_width = 400;                 /* minimum width when centered */
 #endif // CENTER_PATCH
 #if BARPADDING_PATCH
 static const int vertpad = 10;              /* vertical padding of bar */
@@ -35,7 +35,7 @@ static char *fonts[] =
 static const char *fonts[] =
 #endif // XRESOURCES_PATCH
 {
-	"monospace:size=10"
+	"Comic Code Ligatures Nerd Font Mono:size=11"
 };
 #endif // PANGO_PATCH
 #if MANAGED_PATCH
@@ -88,18 +88,18 @@ const
 #endif // XRESOURCES_PATCH
 char *colors[][2] = {
 	/*               fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel]  = { "#eeeeee", "#005577" },
+	[SchemeNorm] = { "#d4be98", "#282828" },
+	[SchemeSel]  = { "#282828", "#d8a657" },
 	[SchemeOut]  = { "#000000", "#00ffff" },
 	#if BORDER_PATCH
-	[SchemeBorder] = { "#000000", "#005577" },
+	[SchemeBorder] = { "#000000", "#d8a657" },
 	#endif // BORDER_PATCH
 	#if MORECOLOR_PATCH
-	[SchemeMid]  = { "#eeeeee", "#770000" },
+	[SchemeMid]  = { "#d4be98", "#3c3836" },
 	#endif // MORECOLOR_PATCH
 	#if HIGHLIGHT_PATCH || FUZZYHIGHLIGHT_PATCH
-	[SchemeSelHighlight]  = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
+	[SchemeSelHighlight]  = { "#282828", "#d8a657" },
+	[SchemeNormHighlight] = { "#d8a657", "#282828" },
 	#endif // HIGHLIGHT_PATCH | FUZZYHIGHLIGHT_PATCH
 	#if HIGHPRIORITY_PATCH
 	[SchemeHp]   = { "#bbbbbb", "#333333" },
@@ -114,13 +114,13 @@ char *colors[][2] = {
 	#endif // EMOJI_HIGHLIGHT_PATCH
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 20;
 #if GRID_PATCH
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
 static unsigned int columns    = 0;
 #endif // GRID_PATCH
 #if LINE_HEIGHT_PATCH
-static unsigned int lineheight = 0;         /* -h option; minimum height of a menu line     */
+static unsigned int lineheight = 5;         /* -h option; minimum height of a menu line     */
 static unsigned int min_lineheight = 8;
 #endif // LINE_HEIGHT_PATCH
 #if NAVHISTORY_PATCH
@@ -139,7 +139,7 @@ static const char worddelimiters[] = " ";
 
 #if BORDER_PATCH
 /* Size of the window border */
-static unsigned int border_width = 0;
+static unsigned int border_width = 2;
 #endif // BORDER_PATCH
 
 #if PREFIXCOMPLETION_PATCH
